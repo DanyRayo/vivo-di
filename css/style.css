@@ -1,0 +1,17 @@
+:root{
+    --bg-color: #f4eeee;
+    /* Palata de colores */
+    --morado: #878EF3;
+    --rosa: #F479D0;
+    --amarillo: #F4E979;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+}
+
+.header {
+    display: block;
+    width: 100%;
+    background-color: var(--blanco);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
