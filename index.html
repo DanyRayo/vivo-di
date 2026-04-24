@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <!-- Estilos -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Los 100 imperdibles vivo | Donde Ir</title>
 </head>
 
@@ -102,61 +104,156 @@
     </section>
 
     <section class="container-fluid notas">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="notas-titulo">Guías y listados para armar tu ruta</h2>
-
+        <div class="notas-header">
+            <div class="notas-info">
+                <h2 class="notas-info__titulo">Guías y listados para armar tu ruta</h2>
+                <i class="bi bi-arrow-right-circle-fill notas-icon"></i>
             </div>
-            <div class="container my-5">
-                <div class="card-grid">
-                    <div class="card-custom item-1">
-                        <img src="pizza_fig.jpg" alt="Pizza de higos en horno de leña">
-                        <div class="card-overlay">
-                            <h5 class="card-title">Mejores restaurantes en CDMX para visitar en 2026</h5>
-                        </div>
-                    </div>
+            <div class="notas-line"></div>
+            <p class="notas-info__text">Explora nuestras listas con los mejores restaurantes, bares, mercados,
+                monumentos y espacios culturales en CDMX, Guadalajara y Monterrey.</p>
+        </div>
+        <div class="notas-grid">
+            .
+        </div>
+    </section>
 
-                    <div class="card-custom item-2 active">
-                        <img src="fest_italiano.jpg" alt="Festival gastronómico italiano">
-                        <div class="card-overlay">
-                            <h5 class="card-title">Pizza Pasta Fest 2026 llega a CDMX: ¡Más de 200 expositores!</h5>
-                        </div>
-                    </div>
-
-                    <div class="card-custom item-3">
-                        <img src="angela_cdmx.jpg" alt="Ángel de la Independencia y rascacielos">
-                        <div class="card-overlay">
-                            <h5 class="card-title">Monumentos y edificios imperdibles de CDMX</h5>
-                        </div>
-                    </div>
-
-                    <div class="card-custom item-4">
-                        <img src="taquitos.jpg" alt="Tacos gourmet de taqueros profesionales">
-                        <div class="card-overlay">
-                            <h5 class="card-title">Duelo GASTRONÓMICO en Polanco: foodtrucks taqueros llegan al hotel W
-                                por Mundial 2026</h5>
-                        </div>
-                    </div>
-
-                    <div class="card-custom item-5">
-                        <img src="muñecas.jpg" alt="Muñecas Otomíes de trapo de colores">
-                        <div class="card-overlay">
-                            <h5 class="card-title">Mercados y artesanías imperdibles en CDMX para comer y comprar</h5>
-                        </div>
-                    </div>
-
-                    <div class="card-custom item-6">
-                        <img src="bosque.jpg" alt="Vista aérea del Bosque de Chapultepec">
-                        <div class="card-overlay">
-                            <h5 class="card-title">Lugares de cultura y entretenimiento en CDMX que debes visitar</h5>
-                        </div>
-                    </div>
-
+    <!-- Section de videos -->
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="videos-info">
+                    <img src="./img/" class="card-img-top" alt="Imagen de diana cazadora">
+                    <img src="./img/" class="card-img-top" alt="Imagen de joven viendo su celular">
+                    <h2 class="card-title">Videos de lugares imperdibles en México para visitar en 2026</h2>
+                    <!-- icono flecha derecha -->
                 </div>
+            </div>
+            <div class="col-md-8">
+                <div class="videos-slider">
+                    <article class="card-video">
+                        <img src="./img/" class="card-img-top" alt="thumbnail de video">
+                        <div class="card-body">
+                            <h3 class="card-title">Dónde jugar ping pong en CDMX: Candelaria Pinponería Juárez</h3>
+                            <!-- Icono de play rojo -->
+
+                        </div>
+                    </article>
+                    <article class="card-video">
+                        <img src="./img/" class="card-img-top" alt="thumbnail de video">
+                        <div class="card-body">
+                            <h3 class="card-title">Las Cuatro Estaciones de Vivaldi en experiencia inmersiva</h3>
+                            <!-- Icono de play rojo -->
+
+                        </div>
+                    </article>
+                    <article class="card-video">
+                        <img src="./img/" class="card-img-top" alt="thumbnail de video">
+                        <div class="card-body">
+                            <h3 class="card-title">Tamales de capibaras y ternurines en CDMX 😍✨</h3>
+                            <!-- Icono de play rojo -->
+
+                        </div>
+                    </article>
+                    <article class="card-video">
+                        <img src="./img/" class="card-img-top" alt="thumbnail de video">
+                        <div class="card-body">
+                            <h3 class="card-title">Dónde jugar ping pong en CDMX: Candelaria Pinponería Juárez</h3>
+                            <!-- Icono de play rojo -->
+
+                        </div>
+                    </article>
+                    <article class="card-video">
+                        <img src="./img/" class="card-img-top" alt="thumbnail de video">
+                        <div class="card-body">
+                            <h3 class="card-title">Las Cuatro Estaciones de Vivaldi en experiencia inmersiva</h3>
+                            <!-- Icono de play rojo -->
+
+                        </div>
+                    </article>
+                    <article class="card-video">
+                        <img src="./img/" class="card-img-top" alt="thumbnail de video">
+                        <div class="card-body">
+                            <h3 class="card-title">Tamales de capibaras y ternurines en CDMX 😍✨</h3>
+                            <!-- Icono de play rojo -->
+
+                        </div>
+                    </article>
+                    <article class="card-video">
+                        <div class="card-body-vermas">
+                            <h3 class="card-title">Ir a ver más videos</h3>
+                            <!-- Icono de ver mas videos -->
+
+                        </div>
+                    </article>
+                </div>
+            </div>
+    </section>
+
+    <!-- Section mapa interactivo -->
+    <section class="container-fluid mapas">
+        <div class="mapas-header">
+            <h2 class="mapas-info__titulo">Los imperdibles que no puedes dejar pasar</h2>
+            <div class="mapas-info__line"></div>
+        </div>
+        <div class="row mapas-ciudades">
+            <div class="col-md-4 mapas-ciudades__ciudad">
+                <h3 class="ciudades-title">CDMX</h3>
+                <img src="./img/mapa-cdmx.png" alt="Mapa de CDMX con puntos de interés" class="mapa-ciudad">
+            </div>
+            <div class="col-md-4 mapas-ciudades__ciudad">
+                <h3 class="ciudades-title">MTY</h3>
+                <img src="./img/mapa-mty.png" alt="Mapa de MTY con puntos de interés" class="mapa-ciudad">
+            </div>
+            <div class="col-md-4 mapas-ciudades__ciudad">
+                <h3 class="ciudades-title">GDL</h3>
+                <img src="./img/mapa-gdl.png" alt="Mapa de GDL con puntos de interés" class="mapa-ciudad">
+            </div>
+        </div>
+        <div class="row ciudad-description">
+            <p class="col-md-12 ciudad-description__text">
+                Descubre el mapa de CDMX con restaurantes, bares, mercados, monumentos y espacios culturales imperdibles.
+            </p>
+        </div>
+        <div class="row cdmx-categorias">
+                <div class="cdmx-categorias__flex">
+                    <div class="categoria">
+                        <img src="./img/cdmx-categorias/restaurantes.png" alt="Icono restaurantes" class="categoria-icono">
+                        <p class="categoria-texto">Restaurantes</p>
+                    </div>
+                    <div class="categoria">
+                        <img src="./img/cdmx-categorias/bares.png" alt="Icono bares" class="categoria-icono">
+                        <p class="categoria-texto">Bares</p>
+                    </div>
+                    <div class="categoria">
+                        <img src="./img/cdmx-categorias/mercados.png" alt="Icono mercados" class="categoria-icono">
+                        <p class="categoria-texto">Mercados</p>
+                    </div>
+                    <div class="categoria">
+                        <img src="./img/cdmx-categorias/monumentos.png" alt="Icono monumentos" class="categoria-icono">
+                        <p class="categoria-texto">Monumentos</p>
+                    </div>
+                    <div class="categoria">
+                        <img src="./img/cdmx-categorias/espacios-culturales.png" alt="Icono espacios culturales"
+                            class="categoria-icono">
+                        <p class="categoria-texto">Espacios culturales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ciudades-main">
+            <div class="col-md-6 ciudades-main__info">
+                <h3 class="ciudades-main__titulo">Mejores restaurantes en CDMX para visitar en 2026</h3>
+                <p class="ciudades-main__text">Restaurantes imperdibles en CDMX: alta cocina, clásicos capitalinos y lugares para comer delicioso.</p>
+            </div>
+            <div class="col-md-6 ciudades-main__mapa">
+                <!-- Iframe del mapa -->
             </div>
         </div>
     </section>
 
+    <!-- Section descargable -->
+     .
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     </script>
