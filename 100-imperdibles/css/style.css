@@ -1,0 +1,194 @@
+:root {
+    --bg-color: #f4eeee;
+    /* Palata de colores */
+    --morado: #878EF3;
+    --rosa: #F479D0;
+    --amarillo: #F4E979;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --fuente-di: "Source Sans Pro", sans-serif;
+    /* gradiente de transparente a morado */
+    --gradiente-transparente-morado: linear-gradient(to bottom, rgba(135, 142, 243, 0) 0%, rgba(135, 142, 243, 1) 100%);
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: var(--fuente-di);
+    position: relative;
+}
+
+.max-width {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+    width: 100%;
+    display: block;
+    position: relative;
+    background-color: var(--morado);
+    color: var(--blanco);
+    height: 85dvh;
+}
+
+.hero-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 100%;
+    height: 100%; */
+}
+
+/* Descripcion */
+.description {
+    width: 100%;
+    position: relative;
+}
+
+.description-content{
+    text-align: center;
+    padding: 4rem 0;
+    line-height: 1.8;
+}
+
+.description-text{
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
+}
+
+.description-logo{
+    margin: 1rem auto;
+}
+
+/* Guias */
+.guias {
+    width: 100%;
+    position: relative;
+}
+
+.guias-content{
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.guias-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.guias-title,
+.guias-icon{
+    font-size: clamp(1.5rem, 3vw, 3.5rem);
+    font-weight: bold;
+    color: var(--morado);
+}
+
+.guias-line{
+    display: block;
+    width: 40%;
+    margin: 1rem 0;
+    height: .2rem;
+    background-color: var(--morado);
+}
+
+.guias-info{
+    display: block;
+    width: 100%;
+    margin: 2rem 0;
+    line-height: 1.5;
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
+    color: var(--negro);
+}
+
+/* Guías - grid */
+.guias-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.div2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.div3 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.div4 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.div5 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.div6 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+/* Seccion videos */
+.videos {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    background: var(--gradiente-transparente-morado);
+}
+
+.videos-content {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.videos-head{
+    flex: 1;
+    display: block;
+    position: relative;
+    border: 1px solid red;
+}
+
+.videos-head__abstract-content {
+    display: grid;
+    place-items: center; /* Centra todo vertical y horizontalmente */
+    padding: 2rem;
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+
+.videos-abstract,
+.videos-cazadora,
+.videos-modelo {
+    grid-area: 1 / 1; /* Magia: Asigna todas las imágenes a la misma celda del grid */
+    width: 100%; /* o un porcentaje menor dependiendo del tamaño que busques */
+    max-width: 250px; /* Limita el tamaño máximo */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Si las imágenes no vienen exportadas con el espaciado exacto y necesitas moverlas un poco individualmente: */
+.videos-cazadora {
+    transform: translate(-10px, -20px); /* Ajuste fino */
+}
+
+.videos-modelo {
+    transform: translate(30px, 10px); /* Ajuste fino */
+}
