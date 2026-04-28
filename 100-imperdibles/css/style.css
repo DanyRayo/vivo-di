@@ -22,6 +22,57 @@ body {
     margin: 0 auto;
 }
 
+/* Header */
+.header{
+    width: 100%;
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.20);
+    padding: 1rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo{
+    width: 15%;
+}
+
+.header-logo__img{
+    width: 100%;
+}
+
+.header-list {
+    display: block;
+    width: 85%;
+}
+
+.header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10rem;
+}
+
+.header-nav__item {
+    text-align: center;
+}
+
+.nav-icon{
+    margin: 0 auto;
+}
+
+.header-nav__title{
+    font-size: clamp(1rem, 2vw, 2.0rem);
+    font-weight: bold;
+    color: var(--negro);
+}
 /* Hero */
 .hero {
     width: 100%;
@@ -29,7 +80,7 @@ body {
     position: relative;
     background-color: var(--morado);
     color: var(--blanco);
-    height: 85dvh;
+    height: 95dvh;
 }
 
 .hero-content {
@@ -44,6 +95,11 @@ body {
     left: 0;
     /* width: 100%;
     height: 100%; */
+}
+
+.capa-17{
+    position: relative;
+    transform: translate(100%, 687%);
 }
 
 /* Descripcion */
@@ -119,6 +175,7 @@ body {
 .div2 {
     grid-column-start: 1;
     grid-row-start: 2;
+    border-radius: 25px;
 }
 
 .div3 {
@@ -143,178 +200,3 @@ body {
     grid-row-start: 2;
 }
 
-.grid-x {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-}
-
-.column1 {
-    grid-column-start: 1;
-    grid-row-start: 1;
-}
-
-.column2 {
-    grid-column-start: 2;
-    grid-row-start: 1;
-}
-
-.column3 {
-    grid-column-start: 3;
-    grid-row-start: 1;
-}
-
-.column4 {
-    grid-column-start: 4;
-    grid-row-start: 1;
-}
-
-.column5 {
-    grid-column-start: 5;
-    grid-row-start: 1;
-}
-
-
-
-/* Seccion videos */
-.videos {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: block;
-    position: relative;
-    background: var(--gradiente-transparente-morado);
-}
-
-.videos-content {
-    width: 100%;
-    display: flex;
-    position: relative;
-    height: 40rem;
-}
-
-.videos-head {
-    flex: 1;
-    display: block;
-    position: relative;
-}
-
-.videos-head__abstract-content {
-    display: grid;
-    place-items: center;
-    /* Centra todo vertical y horizontalmente */
-    padding: 2rem;
-    width: 100%;
-}
-
-.videos-abstract,
-.videos-cazadora,
-.videos-modelo {
-    grid-area: 1 / 1;
-    /* Magia: Asigna todas las imágenes a la misma celda del grid */
-    width: 100%;
-    /* o un porcentaje menor dependiendo del tamaño que busques */
-    height: auto;
-    object-fit: contain;
-}
-
-.videos-abstract {
-    max-width: 127px;
-    transform: translate(-40px, 10px);
-    /* Ajuste fino */
-}
-
-/* Si las imágenes no vienen exportadas con el espaciado exacto y necesitas moverlas un poco individualmente: */
-.videos-cazadora {
-    transform: translate(0px, -10px);
-    /* Ajuste fino */
-    max-width: 170px;
-}
-
-.videos-modelo {
-    transform: translate(65px, 18px);
-    /* Ajuste fino */
-    max-width: 72px;
-}
-
-.videos-head__info {
-    display: block;
-    position: relative;
-    text-align: center;
-}
-
-.videos-info__title {
-    font-size: clamp(1.5rem, 2vw, 2.5rem);
-    font-weight: bold;
-    color: var(--negro);
-}
-
-.videos-info__icon {
-    font-size: 4rem;
-    color: var(--amarillo);
-}
-
-.videos-line {
-    display: block;
-    width: .5rem;
-    margin: 1rem auto;
-    height: 80%;
-    background-color: var(--amarillo);
-}
-
-.videos-slide {
-    flex: 2;
-    display: flex;
-    position: relative;
-    height: 100%;
-    gap: 1rem;
-    /* Habilitamos el scroll horizontal */
-    overflow-x: auto;
-    /* Ocultamos la barra de scroll para un look más limpio */
-    scrollbar-width: none; /* Firefox */
-    /* Definimos el comportamiento del "snap" */
-    scroll-snap-type: x mandatory;
-    border: 1px solid red;
-}
-
-/* Ocultar barra de scroll para Chrome, Safari y Opera */
-.videos-slide::-webkit-scrollbar {
-    display: none;
-}
-
-.video-slide__item {
-    /* Calculamos el ancho para mostrar 3.5 items. 100% / 3.5 ≈ 28.57% */
-    /* Usamos flex-basis para un mejor control en un contenedor flex */
-    flex-basis: calc((100% / 3.5) - 1rem);
-    flex-shrink: 0;
-    position: relative;
-    height: auto;
-    /* Definimos el punto de anclaje para el snap */
-    scroll-snap-align: start;
-    border: 1px solid var(--blanco);
-    border-radius: 25px;
-}
-
-.video-item__img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 25px;
-}
-
-.video-item__info{
-    display: flex;
-}
-
-.video-item__title{
-    flex: 1;
-    font-size: clamp(1.5rem, 1.5vw, 2rem);
-    font-weight: bold;
-    color: var(--negro);
-    padding: 1rem;
-}
-
-.play-icon{
-    font-size: 3rem;
-    color: #ff0000;
-}
