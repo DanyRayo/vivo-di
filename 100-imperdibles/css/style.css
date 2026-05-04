@@ -246,8 +246,8 @@ body.menu-open {
     padding: 2rem;
     border: 0;
     border-radius: 1.8rem 0 0 1.8rem;
-    background-color: var(--morado);
-    color: var(--negro);
+    background-color: var(--negro);
+    color: var(--blanco);
     font-family: var(--fuente-vivo);
     font-size: 1.5rem;
     line-height: 1;
@@ -425,7 +425,7 @@ body.menu-open {
     position: relative;
     background-color: #949cec;
     color: var(--blanco);
-    height: clamp(20rem, 67vw, 70dvh);
+    height: clamp(20rem, 67vw, 78dvh);
     overflow: hidden;
 }
 
@@ -516,7 +516,6 @@ body.menu-open {
     max-width: 100%;
     top: 0;
     left: clamp(1rem, 24%, 28rem);
-    
     /* Animacion giro 180 ida y vuelta */
     animation: cazadora 5s linear infinite;
 }
@@ -553,12 +552,11 @@ body.menu-open {
 }
 
 .abstract-10{
-    width: clamp(6rem, 17vw, 21rem);
+    width: clamp(6rem, 20vw, 22rem);
     height: auto;
     max-width: 100%;
-    top: clamp(7rem, 45%, 26rem);
-    right: clamp(1rem, 37%, 44rem);
-    
+    top: clamp(7rem, 37%, 26rem);
+    right: clamp(1rem, 34%, 45rem);
     animation: expand 5s linear infinite;
 }
 
@@ -609,7 +607,6 @@ body.menu-open {
     max-width: 100%;
     top: clamp(3rem, 35%, 19.4rem);
     right: clamp(1rem, 12%, 13.3rem);
-    
     animation: burbuja2 10s linear infinite;
 }
 
@@ -628,7 +625,7 @@ body.menu-open {
     max-width: 100%;
     bottom: clamp(3.3rem, 3.5rem, 4.5rem);
     left: clamp(5.5rem, 17%, 21.9rem);
-    filter: drop-shadow(0 1.6rem 2rem rgba(0, 0, 0, 0.9));
+    /* filter: drop-shadow(0 1.6rem 2rem rgba(0, 0, 0, 0.9)); */
 }
 
 /* Animacion girar 365 grados infinito, lento aplicado al elemento del png*/    

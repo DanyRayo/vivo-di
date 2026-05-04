@@ -106,6 +106,7 @@ const cityInfoDescription = document.querySelector('.ciudad-info__description');
 const cityInfoTitle = document.querySelector('.ciudad-info__title');
 const cityInfoText = document.querySelector('.ciudad-info__text');
 const cityMapFrame = document.querySelector('.ciudad-mapa iframe');
+const cityMapFrameMobile = document.getElementById('city-map-frame-mobile');
 
 const cityContent = {
     cdmx: {
@@ -115,12 +116,14 @@ const cityContent = {
     mty: {
         description: 'Descubre un mapa interactivo con los mejores lugares de Monterrey para comer, pasear, salir y conocer la ciudad.',
         mapUrl: 'https://view.genially.com/69e2a78d9abc6961c142dba9',
-        mapTitle: 'vivo-MTY'
+        mapTitle: 'vivo-MTY',
+        mapUrlMobile: 'https://view.genially.com/69f3dfc0bf2c3e1be3fe0910'
     },
     gdl: {
         description: 'Explora un mapa interactivo con los lugares imperdibles de Guadalajara para comer, pasear, conocer y disfrutar.',
         mapUrl: 'https://view.genially.com/69e29e2ac8b0136f86b7e088',
-        mapTitle: 'vivo-GDL'
+        mapTitle: 'vivo-GDL',
+        mapUrlMobile: 'https://view.genially.com/69f3d73ea1868f222344bf86'
     }
 };
 
@@ -129,31 +132,36 @@ const categoryContent = {
         title: 'Mejores restaurantes en CDMX para visitar en 2026',
         text: 'Restaurantes imperdibles en CDMX: alta cocina, clasicos capitalinos y lugares para comer delicioso.',
         mapUrl: 'https://view.genially.com/69e1352545a4e9fdba4e5b45',
-        mapTitle: 'vivo-CDMX restaurantes'
+        mapTitle: 'vivo-CDMX restaurantes',
+        mapUrlMobile: 'https://view.genially.com/69f4e3b5a1fba34f66c09a3d'
     },
     bares: {
         title: 'Mejores bares en CDMX para salir de noche',
         text: 'Encuentra bares imperdibles en CDMX: speakeasies, cantinas, terrazas y spots para una gran noche.',
         mapUrl: 'https://view.genially.com/69e14ae5e2490ab05e4fe162',
-        mapTitle: 'vivo-CDMX bares'
+        mapTitle: 'vivo-CDMX bares',
+        mapUrlMobile: 'https://view.genially.com/69f3e67a4b8eb0dd107ece83'
     },
     entretenimiento: {
         title: 'Lugares de entretenimiento en CDMX que debes visitar',
         text: 'Explora los espacios de entretenimiento imperdibles en la Ciudad de México.',
         mapUrl: 'https://view.genially.com/69e2575c68d68ee2450ecba4',
-        mapTitle: 'vivo-CDMX entretenimiento'
+        mapTitle: 'vivo-CDMX entretenimiento',
+        mapUrlMobile: 'https://view.genially.com/69f3ebe56a2dab02bffc4157'
     },
     mercados: {
         title: 'Mercados imperdibles en CDMX para comer y comprar',
         text: 'Conoce los mercados más icónicos de CDMX para probar antojitos, comprar recuerdos y vivir la ciudad.',
         mapUrl: 'https://view.genially.com/69e25436d815a318b8030fdb',
-        mapTitle: 'vivo-CDMX mercados'
+        mapTitle: 'vivo-CDMX mercados',
+        mapUrlMobile: 'https://view.genially.com/69f3cd54a1fba34f668cf667'
     },
     cultura: {
         title: 'Espacios de cultura en CDMX que debes visitar',
         text: 'Explora museos, recintos culturales y los monumentos, edificios históricos y postales urbanas más emblemáticas de la Ciudad de México.',
         mapUrl: 'https://view.genially.com/69e26063bbd98ccbf42b1653',
-        mapTitle: 'vivo-CDMX cultura'
+        mapTitle: 'vivo-CDMX cultura',
+        mapUrlMobile: 'https://view.genially.com/69f6b135e6904d3b185f3e5d'
     }
 };
 
@@ -166,7 +174,8 @@ if (
     cityInfoDescription &&
     cityInfoTitle &&
     cityInfoText &&
-    cityMapFrame
+    cityMapFrame &&
+    cityMapFrameMobile
 ) {
     let activeCityId = 'cdmx';
     let activeCategoryId = 'restaurantes';
@@ -184,15 +193,18 @@ if (
         });
     };
 
-    const updateMapFrame = (mapUrl, mapTitle) => {
-        if (!mapUrl) {
-            return;
+    const updateMapFrame = (mapUrl, mapTitle, mapUrlMobile) => {
+        if (mapUrl && cityMapFrame) {
+            cityMapFrame.src = mapUrl;
+            if (mapTitle) {
+                cityMapFrame.title = mapTitle;
+            }
         }
-
-        cityMapFrame.src = mapUrl;
-
-        if (mapTitle) {
-            cityMapFrame.title = mapTitle;
+        if (mapUrlMobile && cityMapFrameMobile) {
+            cityMapFrameMobile.src = mapUrlMobile;
+            if (mapTitle) {
+                cityMapFrameMobile.title = mapTitle;
+            }
         }
     };
 
@@ -206,7 +218,7 @@ if (
         activeCategoryId = categoryId;
         cityInfoTitle.textContent = categoryData.title;
         cityInfoText.textContent = categoryData.text;
-        updateMapFrame(categoryData.mapUrl, categoryData.mapTitle);
+        updateMapFrame(categoryData.mapUrl, categoryData.mapTitle, categoryData.mapUrlMobile);
         setMapOnlyLayout(false);
 
         categoryItems.forEach((item) => {
@@ -238,7 +250,7 @@ if (
                 updateCategoryContent('restaurantes');
             }
         } else {
-            updateMapFrame(cityData.mapUrl, cityData.mapTitle);
+            updateMapFrame(cityData.mapUrl, cityData.mapTitle, cityData.mapUrlMobile);
             clearActiveCategory();
             setMapOnlyLayout(true);
         }
