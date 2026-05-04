@@ -1,0 +1,105 @@
+:root {
+    --bg-color: #2b2929;
+    /* Palata de colores */
+    --morado: #878EF3;
+    --rosa: #F479D0;
+    --amarillo: #F4E979;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --fuente-di: "Source Sans Pro", sans-serif;
+    --fuente-vivo: "vivoSansGlobal", sans-serif;
+    /* gradiente de transparente a morado */
+    --gradiente-transparente-morado: linear-gradient(to bottom, rgba(135, 142, 243, 0) 0%, rgba(135, 142, 243, 1) 100%);
+    --gradiente-promocional: linear-gradient(90deg, rgba(244, 121, 208, 0.1) 0%, rgba(244, 121, 208, 0.48) 50%, rgba(135, 142, 243, 1) 100%);
+    /* Linear gradient de top --rosa a bottom transparente  */
+    --gradiente-mapas: linear-gradient(to bottom, rgba(244, 121, 208, 1) 30%, rgba(244, 121, 208, 0) 100%);
+    /* linear gradient left a right transparente a morado */
+    --gradiente-redes: linear-gradient(to right, rgba(244, 121, 208, 0) 0%, rgba(135, 142, 243, 1) 100%);
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--fuente-di);
+    position: relative;
+    color: var(--blanco);
+}
+
+.header {
+    background-color: rgba(26, 25, 25, 0.72);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+.header-list__line {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.header-nav__title {
+    color: var(--blanco);
+}
+
+.theme-toggle {
+    background: var(--morado);
+    color: var(--blanco);
+    box-shadow: 0 1.2rem 2.8rem rgba(0, 0, 0, 0.36);
+}
+
+.back-to-top {
+    background: linear-gradient(180deg, rgba(244, 121, 208, 0.95) 0%, rgba(53, 57, 107, 0.96) 100%);
+    color: var(--blanco);
+    box-shadow: 0 1.2rem 2.8rem rgba(0, 0, 0, 0.36);
+}
+
+
+.header-logo__img {
+    filter: brightness(0) invert(1);
+}
+
+.guias-text,
+.promocional-text,
+.promocional-text__legal,
+.videos-info__title,
+.videos__title,
+.ciudad-info__title,
+.ciudad-info__text,
+.revista-description,
+.redes-info,
+.redes-tag__text,
+.mas-guias__title{
+    color: var(--blanco);
+}
+
+.hero{
+    /* Sombrado interno para modo oscuro */
+    box-shadow: 0px 0px 400px -22px rgba(0,0,0,0.5) inset;
+-webkit-box-shadow: 0px 0px 400px -22px rgba(0,0,0,0.5) inset;
+-moz-box-shadow: 0px 0px 400px -22px rgba(0,0,0,0.5) inset;
+}
+
+.abstract-1,
+.abstract-2,
+.abstract-3,
+.abstract-4,
+.abstract-5,
+.abstract-6,
+.abstract-7,
+.abstract-8,
+.abstract-9,
+.abstract-10,
+.abstract-11,
+.abstract-12,
+.abstract-13,
+.abstract-14,
+.abstract-15,
+.abstract-16,
+.abstract-17{
+    filter: drop-shadow(0 1.6rem 3rem rgba(0, 0, 0, 0.9));
+}
+
+@media screen and (max-width: 780px) {
+    .header-list{
+        background-color: rgba(26, 25, 25, 0.72);
+        box-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+    }
+    
+}

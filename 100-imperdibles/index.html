@@ -9,66 +9,103 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <!-- Open Sans google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <!-- reset -->
-    <link rel="stylesheet" href="./css/reset.css">
     <!-- Style -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Modo oscuro -->
+    <link rel="stylesheet" href="./css/dark-mode.css" id="dark-mode-stylesheet" disabled>
     <!-- Iconos Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Los 100 imperdibles | Donde Ir</title>
 </head>
 
 <body>
+    <button type="button" class="theme-toggle" aria-label="Activar modo oscuro" aria-pressed="false"
+        title="Cambiar tema">
+        <i class="bi bi-lightbulb-fill theme-toggle__icon" aria-hidden="true"></i>
+    </button>
+    <a href="#top" class="back-to-top" aria-label="Volver hacia arriba" title="Volver hacia arriba">
+        <i class="bi bi-arrow-up-short back-to-top__icon" aria-hidden="true"></i>
+    </a>
+
+    <div class="glow-blob blob-morado-1"></div>
+    <div class="glow-blob blob-amarillo-1"></div>
+    <div class="glow-blob blob-morado-2"></div>
+    <div class="glow-blob blob-amarillo-2"></div>
+    <div class="glow-blob blob-rosa-1"></div>
+    <div class="glow-blob blob-morado-3"></div>
+    <div class="glow-blob blob-rosa-2"></div>
+    <div class="glow-blob blob-morado-3"></div>
+    <div class="glow-blob blob-amarillo-4"></div>
+
+    <div class="glow-blob blob-amarillo-2"></div>
+    <div class="glow-blob blob-rosa-3"></div>
+
     <!-- Header desktop -->
-    <header class="header">
+    <header class="header" id="top">
         <div class="header-content max-width">
-            <a href="#" class="header-logo">
+            <a href="#top" class="header-logo">
                 <img src="./images/donde-ir-negro.png" alt="Logo Donde Ir" class="header-logo__img">
             </a>
-            <div class="header-list">
+            <div class="header-list" id="header-menu">
+                <div class="header-list__top">
+                    <a href="#top" class="header-list__logo">
+                        <img src="./images/donde-ir-negro.png" alt="Logo Donde Ir" class="header-logo__img">
+                    </a>
+                    <button type="button" class="header-btn__close" aria-label="Cerrar menu">
+                        <img src="./images/icono-cerrar.svg" alt="Cerrar menú" class="header-btn__close-icon">
+                    </button>
+                </div>
+                <div class="header-list__line"></div>
                 <nav class="header-nav">
-                    <a href="#" class="header-nav__item">
+                    <a href="#arma-tu-ruta" class="header-nav__item">
                         <img src="./images/arma-tu-ruta.svg" alt="Icono Arma Tu Ruta" class="nav-icon">
                         <span class="header-nav__title">Arma Tu Ruta</span>
                     </a>
-                    <a href="#" class="header-nav__item">
+                    <a href="#videos" class="header-nav__item">
                         <img src="./images/videos.svg" alt="Icono Videos" class="nav-icon">
                         <span class="header-nav__title">Videos</span>
                     </a>
-                    <a href="#" class="header-nav__item">
+                    <a href="#ciudades" class="header-nav__item">
                         <img src="./images/ciudades.svg" alt="Icono Ciudades" class="nav-icon">
                         <span class="header-nav__title">Ciudades</span>
                     </a>
-                    <a href="#" class="header-nav__item">
+                    <a href="#revista" class="header-nav__item">
                         <img src="./images/revista.svg" alt="Icono Revista" class="nav-icon">
                         <span class="header-nav__title">Revista</span>
                     </a>
                 </nav>
             </div>
+            <button type="button" class="header-btn__menu" aria-label="Abrir menu" aria-controls="header-menu"
+                aria-expanded="false">
+                <img src="./images/mobile-icon.svg" alt="Icono de menú móvil" class="header-btn__menu-icon">
+            </button>
         </div>
     </header>
     <!--Fin Header desktop -->
-
+    <!-- Header mobile -->
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content max-width">
-            <img src="./images/hero/capa-15.webp" alt="Imagen de hero en capa" class="hero-capa capa-15">
-            <img src="./images/hero/capa-14.webp" alt="Imagen de hero en capa" class="hero-capa capa-14">
-            <img src="./images/hero/capa-13.webp" alt="Imagen de hero en capa" class="hero-capa capa-13">
-            <img src="./images/hero/capa-12.webp" alt="Imagen de hero en capa" class="hero-capa capa-12">
-            <img src="./images/hero/capa-11.webp" alt="Imagen de hero en capa" class="hero-capa capa-11">
-            <img src="./images/hero/capa-10.webp" alt="Imagen de hero en capa" class="hero-capa capa-10">
-            <img src="./images/hero/capa-9.webp" alt="Imagen de hero en capa" class="hero-capa capa-9">
-            <img src="./images/hero/capa-8.webp" alt="Imagen de hero en capa" class="hero-capa capa-8">
-            <img src="./images/hero/capa-7.webp" alt="Imagen de hero en capa" class="hero-capa capa-7">
-            <img src="./images/hero/capa-6.webp" alt="Imagen de hero en capa" class="hero-capa capa-6">
-            <img src="./images/hero/capa-5.webp" alt="Imagen de hero en capa" class="hero-capa capa-5">
-            <img src="./images/hero/capa-4.webp" alt="Imagen de hero en capa" class="hero-capa capa-4">
-            <img src="./images/hero/capa-3.webp" alt="Imagen de hero en capa" class="hero-capa capa-3">
-            <img src="./images/hero/capa-2.webp" alt="Imagen de hero en capa" class="hero-capa capa-2">
-            <img src="./images/hero/capa-1.webp" alt="Imagen de hero en capa" class="hero-capa capa-1">
-            <img src="./images/hero/capa-16.webp" alt="Imagen de hero en capa" class="hero-capa capa-16">
-            <!-- <img src="./images/logo-vivo.svg" alt="Logo Vivo" class="hero-capa capa-17"> -->
+            <!-- <video class="hero-video" src="./images/hero/video-hero.mp4" autoplay muted loop></video> -->
+            <!-- <video src="./images/hero/animacion.webm" autoplay muted loop></video> -->
+             <!-- Capas separadas -->
+              <img src="./images/hero/abstractos/capa29.webp" alt="Abstracto del hero" class="hero-abstract abstract-1">
+              <img src="./images/hero/abstractos/capa2.webp" alt="Abstracto del hero" class="hero-abstract abstract-2">
+              <img src="./images/hero/abstractos/capa14.webp" alt="Abstracto del hero" class="hero-abstract abstract-3">
+              <img src="./images/hero/abstractos/circulo-mano.webp" alt="Abstracto del hero" class="hero-abstract abstract-4">
+              <img src="./images/hero/abstractos/capa31.webp" alt="Abstracto del hero" class="hero-abstract abstract-5">
+              <img src="./images/hero/abstractos/capa15.webp" alt="Abstracto del hero" class="hero-abstract abstract-6">
+              <img src="./images/hero/abstractos/capa4.webp" alt="Abstracto del hero" class="hero-abstract abstract-7">
+              <img src="./images/hero/abstractos/capa27.webp" alt="Abstracto del hero" class="hero-abstract abstract-8">
+              <img src="./images/hero/abstractos/capa9.webp" alt="Abstracto del hero" class="hero-abstract abstract-9">
+              <img src="./images/hero/abstractos/capa8.webp" alt="Abstracto del hero" class="hero-abstract abstract-10">
+              <img src="./images/hero/abstractos/capa22.webp" alt="Abstracto del hero" class="hero-abstract abstract-11">
+              <img src="./images/hero/abstractos/capa28.webp" alt="Abstracto del hero" class="hero-abstract abstract-12">
+              <img src="./images/hero/abstractos/capa30.webp" alt="Abstracto del hero" class="hero-abstract abstract-13">
+              <img src="./images/hero/abstractos/capa16.webp" alt="Abstracto del hero" class="hero-abstract abstract-14">
+              <img src="./images/hero/abstractos/capa11.webp" alt="Abstracto del hero" class="hero-abstract abstract-15">
+              <img src="./images/hero/abstractos/logo.webp" alt="Abstracto del hero" class="hero-abstract abstract-16">
+              <img src="./images/hero/abstractos/logo-vivo-hero.webp" alt="Abstracto del hero" class="hero-abstract abstract-17">
         </div>
     </section>
     <!-- Fin Hero -->
@@ -91,7 +128,7 @@
     <!-- Fin descripcion -->
 
     <!-- Arma tu ruta -->
-    <section class="guias">
+    <section class="guias" id="arma-tu-ruta">
         <div class="guias-content max-width">
             <div class="guias-head">
                 <h2 class="guias-title">Guías y listados para armar tu ruta</h2>
@@ -102,64 +139,75 @@
                 <p class="guias-text">Explora nuestras listas con los mejores restaurantes, bares, mercados, monumentos
                     y espacios culturales en CDMX, Guadalajara y Monterrey.</p>
             </div>
-            <!-- <div class="guias-grid">
-                <div class="div1">
-                    <img src="./images/notas/nota-1.jpg" alt="Imagen de nota 1" class="nota-img">
-                    <h3 class="nota-title">Mejores restaurantes en CDMX para visitar en 2026</h3>
-                </div>
-                <div class="div2">
-                    <img src="./images/notas/nota-2.jpg" alt="Imagen de nota 1" class="nota-img">
-                    <h3 class="nota-title">Duelo GASTRONÓMICO en Polanco: foodtrucks taqueros llegan al hotel W por
-                        Mundial 2026</h3>
-                </div>
-                <div class="div3">
-                    <img src="./images/notas/nota-3.jpg" alt="Imagen de nota 1" class="nota-img">
+            <div class="guias-grid">
+                <a href="https://www.dondeir.com/ciudad/10-lugares-imperdibles-que-debes-visitar-en-cdmx/2026/04/" target="_blank" class="div3">
+                    <img src="./images/notas/nota-1.webp" alt="Imagen de nota 3" class="nota-img">
                     <h3 class="nota-title">Pizza Pasta Fest 2026 llega a CDMX: ¡Más de 200 expositores!</h3>
+                </a>
+                <div class="guias-grid__slider">
+                    <a href="https://www.dondeir.com/ciudad/12-actividades-en-familia-en-cdmx-para-todas-las-edades/2026/04/" target="_blank" class="div1">
+                        <img src="./images/notas/nota-2.webp" alt="Imagen de nota 1" class="nota-img">
+                        <h3 class="nota-title">12 actividades en familia en CDMX: para todas las edades</h3>
+                    </a>
+                    <a href="https://www.dondeir.com/vida-nocturna/los-15-mejores-bares-en-cdmx-para-armar-plan-de-noche/2026/04/" target="_blank" class="div2">
+                        <img src="./images/notas/nota-3.webp" alt="Imagen de nota 2" class="nota-img">
+                        <h3 class="nota-title">Los 15 mejores bares en CDMX para armar plan de noche</h3>
+                    </a>
+                    <a href="https://www.dondeir.com/viajes/10-lugares-que-debes-visitar-en-guadalajara-comida-cultura-y-bares/2026/04/" target="_blank" class="div4">
+                        <img src="./images/notas/nota-4.jpg" alt="Imagen de nota 4" class="nota-img">
+                        <h3 class="nota-title">10 lugares que debes visitar en Guadalajara: comida, cultura y bares</h3>
+                    </a>
+                    <a href="https://www.dondeir.com/ciudad/los-5-mercados-que-si-o-si-debes-visitar-en-la-cdmx/2026/04/" target="_blank" class="div5">
+                        <img src="./images/notas/nota-5.webp" alt="Imagen de nota 5" class="nota-img">
+                        <h3 class="nota-title">Los 5 mercados que sí o sí debes visitar en la CDMX</h3>
+                    </a>
+                    <!-- Nota de relleno -->
+                    <a href="" target="_blank" class="div6">
+                        <img src="./images/notas/nota-6.jpg" alt="Imagen de nota 6" class="nota-img">
+                        <h3 class="nota-title">Lugares de cultura y entretenimiento en CDMX que debes visitar</h3>
+                    </a>
+                    <a href="#" target="_blank" class="div7 mas-guias">
+                        <div class="mas-guias__content">
+                            <img src="./images/mas-guias.png" alt="Icono mas guías" class="mas-guias__icon">
+                            <h3 class="mas-guias__title">Ir a ver más guías</h3>
+                            <span class="guias-info__link">
+                                <i class="bi bi-arrow-right-circle-fill guias-info__icon--icon"></i>
+                            </span>
+                        </div>
+                    </a>
                 </div>
-                <div class="div4">
-                    <img src="./images/notas/nota-4.jpg" alt="Imagen de nota 4" class="nota-img">
-                    <h3 class="nota-title">Monumentos y edificios imperdibles de CDMX</h3>
-                </div>
-                <div class="div5">
-                    <img src="./images/notas/nota-5.jpg" alt="Imagen de nota 1" class="nota-img">
-                    <h3 class="nota-title">Mercados y artesanias imperdibles en CDMX para comer y comprar</h3>
-                </div>
-                <div class="div6">
-                    <img src="./images/notas/nota-6.jpg" alt="Imagen de nota 1" class="nota-img">
-                    <h3 class="nota-title">Lugares de cultura y entretenimiento en CDMX que debes visitar</h3>
-                </div>
-            </div> -->
+            </div>
         </div>
     </section>
     <!-- Fin Arma tu ruta -->
 
     <!-- Seccion promocional -->
-    <section class="promocional">
+    <section class="promocional ">
         <div class="promocional-content max-width">
             <div class="promocional-info">
                 <h3 class="promocional-text">Compra un <br>
                     <span class="promocional-text__bold">vivo V70 Series</span><br>
                     y gana la oportunidad de ver a<br>
-                    <span class="promocional-text__bold">RAÚL JIMÉNEZ</span></h3>
+                    <span class="promocional-text__bold raul-name">RAÚL JIMÉNEZ</span></h3>
                 <div class="promocional-line"></div>
                 <span class="promocional-text__bold--participa">¡Participa para ser uno de los 80 afortunados!</span>
-                <h3 class="promocional-text__legal">Consulta más detalles, términos y condiciones en: www.vivo.com/mx.
-                    Vigencia del 15 de abril al 09 de Junio 2026</h3>
             </div>
             <div class="promocional-qr">
-                <a href="#" class="promocional-qr__link">
+                <a href="https://www.vivo.com/mx/activity/vivoelfutbol" target="_blank" class="promocional-qr__link">
                     <img src="./images/qr.png" alt="qr code" class="promocional-qr__img">
                 </a>
             </div>
             <div class="promocional-modelo">
                 <img src="./images/promocional-modelo.png" alt="raul-jimenez" class="promocional-modelo__img">
             </div>
+            <h3 class="promocional-text__legal">Consulta más detalles, términos y condiciones en: www.vivo.com/mx.
+                Vigencia del 15 de abril al 09 de Junio 2026</h3>
         </div>
     </section>
     <!-- Fin seccion promocional -->
 
     <!-- Sección videos -->
-    <section class="videos">
+    <section class="videos " id="videos">
         <div class="videos-content max-width">
             <div class="videos-abstract__buble"></div>
             <div class="videos-abstract__buble-1"></div>
@@ -167,60 +215,62 @@
                 <div class="videos-info__abstract">
                     <img src="./images/videos-abstracts.png" alt="Ilustración de videos" class="videos-info__img">
                 </div>
-                <div class="videos-info__text">
-                    <h2 class="videos-info__title">Videos de lugares imperdibles en México para visitar en 2026</h2>
-                </div>
-                <div class="videos-info__icon">
-                    <a href="#" class="videos-info__link">
-                        <i class="bi bi-arrow-right-circle-fill videos-info__icon--icon"></i>
-                    </a>
+                <div class="videos-info__head">
+                    <div class="videos-info__text">
+                        <h2 class="videos-info__title">Videos de lugares imperdibles en México para visitar en 2026</h2>
+                    </div>
+                    <div class="videos-info__icon">
+                        <a href="https://www.dailymotion.com/playlist/xc2hms" target="_blank" class="videos-info__link">
+                            <i class="bi bi-arrow-right-circle-fill videos-info__icon--icon"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="videos__line"></div>
             <div class="videos__list">
-                <div class="videos__item">
+                <a href="https://dai.ly/xa7de4a" target="_blank" class="videos__item">
                     <div class="videos-item__img">
                         <img src="./images/miniaturas/miniatura-1.jpg" alt="Video 1" class="videos__img">
                     </div>
                     <div class="videos-item__info">
-                        <h3 class="videos__title">Dónde jugar ping pong en CDMX: Candelaria Pinponería Juárez</h3>
+                        <h3 class="videos__title">5 planes que puedes hacer en el Bosque de Chapultepec, Primera Sección 🌿📍</h3>
                         <i class="bi bi-play-fill play-icon"></i>
                     </div>
-                </div>
-                <div class="videos__item">
+                </a>
+                <a href="https://dai.ly/xa7de94" target="_blank" class="videos__item">
                     <div class="videos-item__img">
                         <img src="./images/miniaturas/miniatura-2.jpg" alt="Video 2" class="videos__img">
                     </div>
                     <div class="videos-item__info">
-                        <h3 class="videos__title">Las Cuatro Estaciones de Vivaldi en experiencia inmersiva</h3>
+                        <h3 class="videos__title">Date en la Cineteca por menos de 200 pesos</h3>
                         <i class="bi bi-play-fill play-icon"></i>
                     </div>
-                </div>
-                <div class="videos__item">
+                </a>
+                <a href="https://dai.ly/xa7dfic" target="_blank" class="videos__item">
                     <div class="videos-item__img">
                         <img src="./images/miniaturas/miniatura-3.jpg" alt="Video 3" class="videos__img">
                     </div>
                     <div class="videos-item__info">
-                        <h3 class="videos__title">Tamales de capibaras y ternurines en CDMX 😍✨</h3>
+                        <h3 class="videos__title">Gran Hotel de la CDMX</h3>
                         <i class="bi bi-play-fill play-icon"></i>
                     </div>
-                </div>
-                <div class="videos__item">
+                </a>
+                <a href="https://dai.ly/xa7dehm" target="_blank" class="videos__item">
                     <div class="videos-item__img">
-                        <img src="./images/miniaturas/miniatura-1.jpg" alt="Video 3" class="videos__img">
+                        <img src="./images/miniaturas/miniatura-4.jpg" alt="Video 3" class="videos__img">
                     </div>
                     <div class="videos-item__info">
-                        <h3 class="videos__title">Dónde jugar ping pong en CDMX: Candelaria Pinponería Juárez</h3>
+                        <h3 class="videos__title">3 Planes en la Torre Latino</h3>
                         <i class="bi bi-play-fill play-icon"></i>
                     </div>
-                </div>
-                <div class="videos__item">
-                    <div class="videos-item__img">
-                        <img src="./images/miniaturas/miniatura-1.jpg" alt="Video 3" class="videos__img">
-                    </div>
-                    <div class="videos-item__info">
-                        <h3 class="videos__title">Dónde jugar ping pong en CDMX: Candelaria Pinponería Juárez</h3>
-                        <i class="bi bi-play-fill play-icon"></i>
+                </a>
+                <div class="videos__item mas-videos">
+                    <div class="mas-videos__content">
+                        <img src="./images/mas-videos.svg" alt="Icono mas videos" class="mas-videos__icon">
+                        <h3 class="videos__title">Ir a ver más videos</h3>
+                        <a href="https://www.dailymotion.com/playlist/xc2hms" target="_blank" class="videos-info__link">
+                            <i class="bi bi-arrow-right-circle-fill videos-info__icon--icon"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -228,60 +278,175 @@
     </section>
 
     <!-- Seccion Mapas -->
-    <section class="mapas">
+    <section class="mapas" id="ciudades">
         <div class="mapas-content max-width">
+            <div class="mapas-abstract__buble-1"></div>
+            <div class="mapas-abstract__buble-2"></div>
             <div class="mapas-head">
                 <h2 class="mapas-title">Los imperdibles que <br> no puedes dejar pasar</h2>
                 <div class="mapas-head__line"></div>
+                <img src="./images/lineas.png" alt="Lineas abstractas" class="mapas-lineas__abstract">
             </div>
             <div class="mapas-ciudades">
-                <div class="mapas-ciudad">
+                <div id="cdmx" class="mapas-ciudad mapas-ciudad__active">
                     <h3 class="mapas-ciudad__title">CDMX</h3>
                     <img src="./images/cdmx.jpg" alt="Mapa de CDMX" class="mapas-ciudad__img mapas-ciudad__img--cdmx">
                 </div>
-                <div class="mapas-ciudad">
+                <div id="mty" class="mapas-ciudad">
                     <h3 class="mapas-ciudad__title">MTY</h3>
-                    <img src="./images/mty.jpg" alt="Mapa de Monterrey" class="mapas-ciudad__img mapas-ciudad__img--mty">
+                    <img src="./images/mty.jpg" alt="Mapa de Monterrey"
+                        class="mapas-ciudad__img mapas-ciudad__img--mty">
                 </div>
-                <div class="mapas-ciudad">
+                <div id="gdl" class="mapas-ciudad">
                     <h3 class="mapas-ciudad__title">GDL</h3>
-                    <img src="./images/gdl.jpg" alt="Mapa de Guadalajara" class="mapas-ciudad__img mapas-ciudad__img--gdl">
+                    <img src="./images/gdl.jpg" alt="Mapa de Guadalajara"
+                        class="mapas-ciudad__img mapas-ciudad__img--gdl">
                 </div>
             </div>
             <div class="ciudad-description">
-                <p class="ciudad-description__text">Descubre el mapa de CDMX con restaurantes, bares, mercados, monumentos y espacios culturales imperdibles.</p>
+                <p class="ciudad-description__text">Descubre el mapa de CDMX con restaurantes, bares, mercados,
+                    monumentos y espacios culturales imperdibles.</p>
             </div>
             <div class="ciudad-categorias">
-                <div class="ciudad-categorias__item categoria-active">
+                <div id="restaurantes" class="ciudad-categorias__item categoria-active">
                     <img src="./images/restaurantes-icon.svg" class="ciudad-categorias__icon"></img>
                     <span class="ciudad-categorias__title">Restaurantes</span>
                 </div>
-                <div class="ciudad-categorias__item">
+                <div id="bares" class="ciudad-categorias__item">
                     <img src="./images/bares-icon.svg" class="ciudad-categorias__icon"></img>
                     <span class="ciudad-categorias__title">Bares</span>
                 </div>
-                <div class="ciudad-categorias__item">
+                <div id="entretenimiento" class="ciudad-categorias__item">
                     <img src="./images/entretenimiento-icon.svg" class="ciudad-categorias__icon"></img>
                     <span class="ciudad-categorias__title">Entretenimiento</span>
                 </div>
-                <div class="ciudad-categorias__item">
+                <div id="mercados" class="ciudad-categorias__item">
                     <img src="./images/mercados-icon.svg" class="ciudad-categorias__icon"></img>
                     <span class="ciudad-categorias__title">Mercados</span>
                 </div>
-                <div class="ciudad-categorias__item">
+                <div id="cultura" class="ciudad-categorias__item">
                     <img src="./images/cultura-icon.svg" class="ciudad-categorias__icon"></img>
                     <span class="ciudad-categorias__title">Cultura</span>
                 </div>
             </div>
             <div class="ciudad-info">
                 <div class="ciudad-info__description">
-                    <h3 class="ciudad-info__title">
-                        Mejores restaurantes en CDMX para visitar en 2026
-                    </h3>
+                    <h3 class="ciudad-info__title">Mejores restaurantes en CDMX para visitar en 2026</h3>
+                    <p class="ciudad-info__text">Restaurantes imperdibles en CDMX: alta cocina, clásicos capitalinos y
+                        lugares para comer delicioso.</p>
+                </div>
+                <div class="ciudad-mapa">
+                    <!-- <img src="./images/mapa.png" alt="" class="mapa-ejemplo"> -->
+                    <div style="width: 100%;">
+                        <div class="ciudad-mapa__insert"
+                            style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe
+                                title="vivo-CDMX restaurantes" frameborder="0" width="1200px" height="675px"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                src="https://view.genially.com/69e1352545a4e9fdba4e5b45" type="text/html"
+                                allowscriptaccess="always" allowfullscreen="true" scrolling="yes"
+                                allownetworking="all"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="ciudad-mapa__mobile">
+                    <!-- <img src="./images/mapa.png" alt="" class="mapa-ejemplo"> -->
+                    <div style="width: 90%; margin: 0 auto;">
+                        <div class="ciudad-mapa__insert-mobile"
+                            style="position: relative; padding-bottom: 177.77777777777777%; padding-top: 0; height: 0;">
+                            <iframe title="vivo-Mercados-mob" frameborder="0" width="360px" height="640px"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                src="https://view.genially.com/69f3cd54a1fba34f668cf667" type="text/html"
+                                allowscriptaccess="always" allowfullscreen="true" scrolling="yes"
+                                allownetworking="all"></iframe> </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Section Revista -->
+    <section class="revista " id="revista">
+        <div class="revista-content max-width">
+            <div class="revista-portada">
+                <img src="./images/ejemplo-portada.png" alt="Portada descargable" class="revista-portada__img">
+            </div>
+            <div class="revista-info">
+                <h2 class="revista-title">Revista digital: 100 imperdibles de México</h2>
+                <div class="revista-line"></div>
+                <p class="revista-description">Consulta la revista digital de 100 imperdibles de México con
+                    recomendaciones de lugares para comer, pasear, salir y explorar.</p>
+                <a href="#" class="revista-vermas">
+                    <i class="bi bi-arrow-right-circle-fill revista-icon"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Redes Sociales -->
+    <section class="redes ">
+        <div class="redes-content max-width">
+            <div class="redes-abstract__buble"></div>
+            <div class="redes-abstract__buble-1"></div>
+            <div class="redes-abstract__buble-2"></div>
+            <div class="redes-abstract__buble-3"></div>
+            <div class="redes-celular">
+                <div class="burble-redes-1"></div>
+                <img src="./images/redes-celular.webp" alt="Celular vivo V70 " class="redes-celular__img">
+            </div>
+            <div class="redes-info">
+                <h3 class="redes-info__text">Sigue a</h3>
+                <img src="./images/logo-vivo.svg" alt="Logo vivo Smartphone" class="redes-logo">
+                <h3 class="redes-info__text">en sus redes sociales</h3>
+            </div>
+            <div class="redes-icons">
+                <div class="redes-icons__list">
+                    <a href="https://www.instagram.com/vivomobilemx/" target="_blank" class="redes-icon__link"><i
+                            class="bi bi-instagram redes-icon redes-icon__instagram"></i></a>
+                    <a href="https://www.facebook.com/vivomobileMX/?brand_redir=1529780750583160" target="_blank"
+                        class="redes-icon__link"><i class="bi bi-facebook redes-icon redes-icon__facebook"></i></a>
+                    <a href="https://www.tiktok.com/@vivomobilemx" target="_blank" class="redes-icon__link"><i
+                            class="bi bi-tiktok redes-icon redes-icon__tiktok"></i></a>
+                    <a href="https://www.youtube.com/@vivomobilemx" target="_blank" class="redes-icon__link"><i
+                            class="bi bi-youtube redes-icon redes-icon__youtube"></i></a>
+                </div>
+                <div class="redes-tag">
+                    <span class="redes-tag__text">#vivoSmartphone</span>
+                    <span class="redes-tag__text">#vivoV70</span>
+                    <span class="redes-tag__text">#V70Series</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content max-width">
+            <div class="logo-footer">
+                <img src="./images/donde-blanco.png" alt="Logo donde ir blanco" class="logo-footer__img">
+            </div>
+            <div class="footer-info">
+                <span class="footer-text">
+                    Todos los derechos reservados Dónde ir 2026
+                    <br>
+                    Desarrollado por Grupo Medios
+                </span>
+            </div>
+            <div class="footer-icons">
+                <!-- Icono tiktok -->
+                <a href="https://www.tiktok.com/@dondeir" target="_blank" class="footer-icon__link"><i
+                        class="bi bi-tiktok footer-icon"></i></a>
+                <!-- Icono YouTube -->
+                <a href="https://www.youtube.com/@RevistaDondeIr" target="_blank" class="footer-icon__link"><i
+                        class="bi bi-youtube footer-icon"></i></a>
+                <!-- Icono Facebook -->
+                <a href="https://www.facebook.com/revistadondeir/" target="_blank" class="footer-icon__link"><i
+                        class="bi bi-facebook footer-icon"></i></a>
+                <!-- Icono Instagram -->
+                <a href="https://www.instagram.com/donde_ir/" target="_blank" class="footer-icon__link"><i
+                        class="bi bi-instagram footer-icon"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
